@@ -3,7 +3,7 @@ language: shell
 
 script:
     - choco install cygwin --params "/NoStartMenu"
-    - choco install cyg-get && /c/ProgramData/chocolatey/bin/cyg-get.bat dos2unix patch unzip automake make bzip2 libsqlite-3-devel libtool gcc-g++ openssl-devel wget gcc-core cygwin-devel xz cmake libuv1
+    - choco install cyg-get && /c/ProgramData/chocolatey/bin/cyg-get.bat dos2unix patch unzip automake make bzip2 libsqlite-3-devel libtool gcc-g++ openssl-devel wget gcc-core cygwin-devel xz cmake libuv1 librhash0
     - echo cygwin folder
     - ls /c/tools/cygwin
     - echo libs folder
