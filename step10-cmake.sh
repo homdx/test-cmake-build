@@ -5,6 +5,9 @@ then
 echo "Travis run. Change path env"
 echo $PATH
 export PATH=/cygdrive/c/tools/cygwin/lib:/cygdrive/c/tools/cygwin/bin:/cygdrive/c/tools/usr/bin:/cygdrive/c/tools/usr/local/bin:$PATH
+echo old root is $CMAKE_ROOT
+export CMAKE_ROOT=/usr/share/cmake-3.13.1/Templates
+echo now is root $CMAKE_ROOT
 echo ls tools-cygwin-bin
 ls /cygdrive/c/tools/cygwin/bin
 echo ls tools-cygwin-bin
