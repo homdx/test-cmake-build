@@ -2,6 +2,14 @@ os: windows
 language: shell
 
 script:
+    - choco install cygwin --params "/NoStartMenu"
+    - choco install cyg-get && /c/ProgramData/chocolatey/bin/cyg-get.bat dos2unix patch unzip automake make bzip2 libsqlite-3-devel libtool gcc-g++ openssl-devel wget gcc-core cygwin-devel xz cmake libuv1
+    - echo cygwin folder
+    - ls /c/tools/cygwin
+    - echo libs folder
+    - ls /c/tools/cygwin/lib
+    - echo bin folder
+    - ls /c/tools/cygwin/bin
+    - cmake --version && sh cmake --version && sh whereis cmake
     - ./setup-cygwin-packages.cmd
-    - choco install cyg-get && cyg-get dos2unix patch unzip automake make bzip2 libsqlite-3-devel libtool gcc-g++ openssl-devel wget gcc doxygen libllvm5 libclang5 libedit0 libxapian30 cmake
     - ./travis-step10-cmake.cmd
